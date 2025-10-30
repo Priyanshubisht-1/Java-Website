@@ -1,78 +1,77 @@
 /* --- Original Color Palette (From your index.html) --- */
 :root {
-  --primary-action: #f08a5d; /* Terracotta Orange */
-  --dark-accent: #3d3b5b; /* Deep Purple (for headings, footer) */
-  --light-background: #dfebe9; /* Very Light Teal (for hero bg) */
-  --secondary-accent: #6a999c; /* Muted Blue/Teal */
-  --text-color: #333;
-  --light-text-color: #666;
-  --white: #fff;
-  --off-white: #fcfcfc;
-  --border-color: #e0e8e7; /* Light teal border */
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    --primary-action: #f08a5d;  /* Terracotta Orange */
+    --dark-accent: #3d3b5b;     /* Deep Purple (for headings, footer) */
+    --light-background: #dfebe9; /* Very Light Teal (for hero bg) */
+    --secondary-accent: #6a999c; /* Muted Blue/Teal */
+    --text-color: #333;
+    --light-text-color: #666;
+    --white: #fff;
+    --off-white: #fcfcfc;
+    --border-color: #e0e8e7;     /* Light teal border */
+    --shadow: 0 4px 12px rgba(0,0,0,0.05); /* Softer shadow */
 }
 
 /* --- General Styling --- */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--white);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
 }
 
 a {
-  text-decoration: none;
-  color: var(--primary-action);
+    text-decoration: none;
+    color: var(--primary-action);
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* --- Button Styling (From your index.html) --- */
 .btn-primary {
-  display: inline-block;
-  background: var(--primary-action);
-  color: var(--white);
-  padding: 12px 28px;
-  border-radius: 50px;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
+    display: inline-block;
+    background: var(--primary-action);
+    color: var(--white);
+    padding: 12px 28px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .btn-primary:hover {
-  background: #e57373;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: #e57373;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* --- Navbar (From your index.html) --- */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: var(--white);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -80,124 +79,110 @@ img {
 }
 
 .navbar .nav-links {
-  display: flex;
+    display: flex;
 }
 
 .navbar .nav-links li {
-  margin-left: 2rem;
+    margin-left: 2rem;
 }
 
 .navbar .nav-links a {
-  color: var(--light-text-color);
-  font-weight: 600;
-  transition: color 0.3s ease;
-  padding-bottom: 5px;
-  position: relative;
-  font-size: 1.1rem;
+    color: var(--light-text-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+    padding-bottom: 5px;
+    position: relative;
+    font-size: 1.1rem;
 }
 
 .navbar .nav-links a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background: var(--primary-action);
-  transition: width 0.3s ease;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-action);
+    transition: width 0.3s ease;
 }
 
 .navbar .nav-links a:hover {
-  color: var(--dark-accent);
+    color: var(--dark-accent);
 }
 
 .navbar .nav-links a:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
 .burger {
-  display: none;
-  cursor: pointer;
+    display: none;
+    cursor: pointer;
 }
 
 .burger div {
-  width: 25px;
-  height: 3px;
-  background-color: var(--dark-accent);
-  margin: 5px;
-  transition: all 0.3s ease;
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-accent);
+    margin: 5px;
+    transition: all 0.3s ease;
 }
 
 /* --- Footer (From your index.html) --- */
 .footer {
-  background: var(--dark-accent);
-  color: rgba(237, 247, 246, 0.8);
-  text-align: center;
-  padding: 3rem 2rem;
-  margin-top: 3rem;
+    background: var(--dark-accent);
+    color: rgba(237, 247, 246, 0.8);
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 3rem;
 }
 
 .footer p {
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
 }
 
 .footer .social-links a {
-  color: var(--white);
-  font-size: 1.6rem;
-  margin: 0 12px;
-  transition: color 0.3s ease;
+    color: var(--white);
+    font-size: 1.6rem;
+    margin: 0 12px;
+    transition: color 0.3s ease;
 }
 
 .footer .social-links a:hover {
-  color: var(--primary-action);
+    color: var(--primary-action);
 }
 
 /* --- Mobile Nav Specifics (From your index.html) --- */
 @media (max-width: 768px) {
-  .navbar .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--white);
-    position: absolute;
-    top: 65px;
-    left: 0;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
-  }
-  .navbar .nav-links.nav-active {
-    display: flex;
-  }
-  .navbar .nav-links li {
-    margin: 0;
-    width: 100%;
-  }
-  .navbar .nav-links a {
-    display: block;
-    padding: 1rem;
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-  }
-  .navbar .nav-links a:hover {
-    background-color: var(--off-white);
-    color: var(--primary-action);
-  }
-  .navbar .nav-links a::after {
-    display: none;
-  }
-  .burger {
-    display: block;
-  }
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-  .toggle .line2 {
-    opacity: 0;
-  }
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--white);
+        position: absolute;
+        top: 65px;
+        left: 0;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+    }
+    .navbar .nav-links.nav-active { display: flex; }
+    .navbar .nav-links li { margin: 0; width: 100%; }
+    .navbar .nav-links a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .navbar .nav-links a:hover {
+        background-color: var(--off-white);
+        color: var(--primary-action);
+    }
+    .navbar .nav-links a::after { display: none; }
+    .burger { display: block; }
+    .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
+    .toggle .line2 { opacity: 0; }
+    .toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); }
 }
+
 
 /* ========================================
 --- STYLES FOR PROGRAMS.HTML ---
@@ -205,101 +190,101 @@ img {
 */
 
 .program-page-main {
-  padding: 2.5rem 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
+    padding: 2.5rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .program-page-main h1 {
-  font-size: 2.8rem;
-  color: var(--dark-accent);
-  margin-bottom: 2.5rem;
-  text-align: center;
+    font-size: 2.8rem;
+    color: var(--dark-accent);
+    margin-bottom: 2.5rem;
+    text-align: center;
 }
 
 .program-page-container {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
 }
 
 /* --- Sidebar --- */
 #sidebar {
-  flex: 0 0 300px; /* Sidebar width */
-  background: var(--off-white);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 1.5rem;
-  position: sticky;
-  top: 100px; /* Sticky below navbar (navbar height + 2rem) */
-  box-shadow: var(--shadow);
-  /* Set a max-height for scrolling on desktop */
-  height: calc(100vh - 120px);
-  overflow-y: auto;
+    flex: 0 0 300px; /* Sidebar width */
+    background: var(--off-white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    position: sticky;
+    top: 100px; /* Sticky below navbar (navbar height + 2rem) */
+    box-shadow: var(--shadow);
+    /* Set a max-height for scrolling on desktop */
+    height: calc(100vh - 120px);
+    overflow-y: auto;
 }
 
 #sidebar h3 {
-  font-size: 1.4rem;
-  color: var(--dark-accent);
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid var(--border-color);
+    font-size: 1.4rem;
+    color: var(--dark-accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
 }
 
 /* Improved spacing between sidebar buttons */
 .category-list li {
-  margin-bottom: 0.5rem; /* Adds space between each link */
+    margin-bottom: 0.5rem; /* Adds space between each link */
 }
 
 .category-list li a {
-  display: block;
-  padding: 0.85rem 1rem; /* Slightly taller buttons */
-  color: var(--light-text-color);
-  font-weight: 500;
-  border-radius: 6px; /* Softer rounded corners */
-  transition: all 0.2s ease-in-out;
-  font-size: 0.95rem;
+    display: block;
+    padding: 0.85rem 1rem; /* Slightly taller buttons */
+    color: var(--light-text-color);
+    font-weight: 500;
+    border-radius: 6px; /* Softer rounded corners */
+    transition: all 0.2s ease-in-out;
+    font-size: 0.95rem;
 }
 
 /* Improved hover effect using theme colors */
 .category-list li a:hover {
-  background-color: var(--light-background); /* Light teal bg */
-  color: var(--dark-accent); /* Dark purple text */
-  transform: translateX(4px);
+    background-color: var(--light-background); /* Light teal bg */
+    color: var(--dark-accent); /* Dark purple text */
+    transform: translateX(4px);
 }
 
 .category-list li a.active {
-  background-color: var(--primary-action); /* Terracotta bg */
-  color: var(--white);
-  font-weight: 600;
-  transform: translateX(0);
+    background-color: var(--primary-action); /* Terracotta bg */
+    color: var(--white);
+    font-weight: 600;
+    transform: translateX(0);
 }
 
 /* --- Program Content --- */
 #program-content {
-  flex: 1; /* Takes remaining space */
-  min-width: 0; /* Fix for flexbox overflow issues */
+    flex: 1; /* Takes remaining space */
+    min-width: 0; /* Fix for flexbox overflow issues */
 }
 
 .program-item {
-  background: var(--off-white);
-  padding: 2rem 2.5rem;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border-color);
-  margin-bottom: 2rem;
-  text-align: left;
-  width: 100%;
-  border-left: 5px solid var(--secondary-accent); /* Theme-colored accent */
+    background: var(--off-white);
+    padding: 2rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    text-align: left;
+    width: 100%;
+    border-left: 5px solid var(--secondary-accent); /* Theme-colored accent */
 }
 
 /* NEW/MODIFIED: Style for the new combined description heading */
 .program-item .program-description-heading {
-  font-size: 1.6rem;
-  color: var(--dark-accent);
-  margin-bottom: 1.5rem; /* Replaces margin from old h3 and p */
-  font-weight: 600;
-  line-height: 1.4;
+    font-size: 1.6rem;
+    color: var(--dark-accent);
+    margin-bottom: 1.5rem; /* Replaces margin from old h3 and p */
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 /* REMOVED (Replaced by the rule above)
@@ -308,132 +293,130 @@ img {
 */
 
 .program-heading {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--dark-accent);
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-accent);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
 }
 
 .copy-btn {
-  background: var(--secondary-accent);
-  color: white;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: background-color 0.2s ease;
+    background: var(--secondary-accent);
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
 }
 
 .copy-btn:hover {
-  background: var(--dark-accent);
+    background: var(--dark-accent);
 }
 
 .copy-btn.copied {
-  background: #28a745; /* A standard success green */
+    background: #28a745; /* A standard success green */
 }
 
 /* Prism.js Code Block Style */
 /* The CDN theme provides most styles, we just add spacing */
 pre[class*="language-java"] {
-  border-radius: 5px;
-  padding: 1.5rem !important; /* !important to override default */
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-
-  /* --- MODIFICATION --- */
-  /* Changed from pre-wrap to pre to enable horizontal scrolling */
-  white-space: pre;
-  word-wrap: normal; /* Ensure word-wrap is off */
-  overflow-x: auto; /* Add horizontal scrollbar when content overflows */
+    border-radius: 5px;
+    padding: 1.5rem !important; /* !important to override default */
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    
+    /* --- MODIFICATION --- */
+    /* Changed from pre-wrap to pre to enable horizontal scrolling */
+    white-space: pre;
+    word-wrap: normal; /* Ensure word-wrap is off */
+    overflow-x: auto;  /* Add horizontal scrollbar when content overflows */
 }
 
 /* Output Box Style */
 .output-box {
-  background: var(--white);
-  border: 1px solid var(--border-color);
-  padding: 1.5rem;
-  border-radius: 5px;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
-    monospace;
-  color: var(--text-color);
-  min-height: 50px;
-
-  /* --- MODIFICATION --- */
-  /* Changed from pre-wrap to pre to enable horizontal scrolling */
-  white-space: pre;
-  word-wrap: normal; /* Ensure word-wrap is off */
-  overflow-x: auto; /* Add horizontal scrollbar when content overflows */
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 5px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    color: var(--text-color);
+    min-height: 50px;
+    
+    /* --- MODIFICATION --- */
+    /* Changed from pre-wrap to pre to enable horizontal scrolling */
+    white-space: pre;
+    word-wrap: normal; /* Ensure word-wrap is off */
+    overflow-x: auto;  /* Add horizontal scrollbar when content overflows */
 }
 
 /* Loading Spinner */
 .loader-container {
-  text-align: center;
-  padding: 4rem;
+    text-align: center;
+    padding: 4rem;
 }
 .spinner {
-  width: 50px;
-  height: 50px;
-  border: 5px solid var(--light-background);
-  border-top-color: var(--primary-action); /* Use theme color */
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--light-background);
+    border-top-color: var(--primary-action); /* Use theme color */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+    to { transform: rotate(360deg); }
 }
 
 /* Message for no items */
 .no-match-msg {
-  font-size: 1.1rem;
-  color: var(--light-text-color);
-  text-align: center;
-  padding: 3rem;
-  background: var(--off-white);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
+    font-size: 1.1rem;
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 3rem;
+    background: var(--off-white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
 }
+
 
 /* --- Improved Responsive Design --- */
 /* For tablets and smaller desktops */
 @media (max-width: 992px) {
-  .program-page-container {
-    flex-direction: column; /* Stack sidebar on top of content */
-  }
+    .program-page-container {
+        flex-direction: column; /* Stack sidebar on top of content */
+    }
 
-  #sidebar {
-    position: static; /* Remove sticky behavior */
-    width: 100%;
-    height: auto; /* Allow it to size based on content */
-    max-height: 400px; /* But make it scrollable if too long */
-    overflow-y: auto;
-  }
+    #sidebar {
+        position: static; /* Remove sticky behavior */
+        width: 100%;
+        height: auto; /* Allow it to size based on content */
+        max-height: 400px; /* But make it scrollable if too long */
+        overflow-y: auto;
+    }
 }
 
 /* For mobile phones */
 @media (max-width: 768px) {
-  .program-page-main {
-    padding: 1.5rem 1rem; /* Tighter padding on mobile */
-  }
+    .program-page-main {
+        padding: 1.5rem 1rem; /* Tighter padding on mobile */
+    }
 
-  .program-page-main h1 {
-    font-size: 2.2rem;
-  }
+    .program-page-main h1 {
+        font-size: 2.2rem;
+    }
 
-  .program-item {
-    padding: 1.5rem; /* Tighter padding on mobile */
-  }
+    .program-item {
+        padding: 1.5rem; /* Tighter padding on mobile */
+    }
 }

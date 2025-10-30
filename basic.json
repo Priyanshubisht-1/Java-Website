@@ -1,17 +1,17 @@
 [
-{
-"title": "Write a Java program to print ‘Hello World!’ on screen.",
-"code": "public class HelloWorld {\n    public static void main(String[] args) {\n        // Prints "Hello, World!" to the terminal window.\n        System.out.println("Hello, World!");\n    }\n}",
-"output": "Hello, World!"
-},
-{
-"title": "Write a Java program to print the sum of two numbers (e.g., 10 and 20).",
-"code": "public class SumOfTwo {\n    public static void main(String[] args) {\n        // Declare two integer variables\n        int num1 = 10;\n        int num2 = 20;\n\n        // Calculate the sum\n        int sum = num1 + num2;\n\n        // Print the result\n        System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);\n    }\n}",
-"output": "The sum of 10 and 20 is: 30"
-},
-{
-"title": "Write a Java program that takes two numbers and displays the product of two numbers.",
-"code": "public class ProductOfTwo {\n    public static void main(String[] args) {\n        int num1 = 8;\n        int num2 = 6;\n\n        int product = num1 * num2;\n\n        System.out.println("The product is: " + product);\n    }\n}",
-"output": "The product is: 48"
-}
+  {
+    "title": "Write a Java program to print 'Hello World!' on screen.",
+    "code": "public class HelloWorld {\n    public static void main(String[] args) {\n        // Prints \"Hello, World!\" to the terminal window.\n        System.out.println(\"Hello, World!\");\n    }\n}",
+    "output": "Hello, World!"
+  },
+  {
+    "title": "Write a Java program to print the sum of two numbers (e.g., 10 and 20).",
+    "code": "public class SumOfTwo {\n    public static void main(String[] args) {\n        // Declare two integer variables\n        int num1 = 10;\n        int num2 = 20;\n\n        // Calculate the sum\n        int sum = num1 + num2;\n\n        // Print the result\n        System.out.println(\"The sum of \" + num1 + \" and \" + num2 + \" is: \" + sum);\n    }\n}",
+    "output": "The sum of 10 and 20 is: 30"
+  },
+  {
+    "title": "Write a Java program that takes two numbers and displays the product of two numbers.",
+    "code": "public class ProductOfTwo {\n    public static void main(String[] args) {\n        int num1 = 8;\n        int num2 = 6;\n\n        int product = num1 * num2;\n\n        System.out.println(\"The product is: \" + product);\n    }\n}",
+    "output": "The product is: 48"
+  }
 ]
