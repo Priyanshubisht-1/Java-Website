@@ -335,23 +335,9 @@ pre[class*="language-java"] {
     font-size: 0.95rem;
     line-height: 1.5;
     /* Allow code to wrap if it's too long, better for mobile */
-    
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    white-space: pre; /* preserve formatting */
-    overflow-x: auto; /* ✅ horizontal scrollbar instead of overflow */
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch; /* smooth scroll for mobile */
-    word-wrap: normal;
-}
-
-pre > code,
-code[class*="language-"] {
-    display: block;
-    max-width: 100%;
-    box-sizing: border-box;
+    white-space: pre;
+    word-wrap: normal; /* Ensure word-wrap is off */
+    overflow-x: auto;  /* Add horizontal scrollbar when content overflows */
 }
 
 /* Output Box Style */
@@ -363,9 +349,9 @@ code[class*="language-"] {
     font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
     color: var(--text-color);
     min-height: 50px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    overflow-x:auto;
+    white-space: pre;
+    word-wrap: normal; /* Ensure word-wrap is off */
+    overflow-x: auto;  /* Add horizontal scrollbar when content overflows */
 }
 
 /* Loading Spinner */
