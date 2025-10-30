@@ -367,6 +367,77 @@ pre[class*="language-java"] {
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
+
+/* ------------------ Robust fix for code overflow (horizontal scrollbar) ------------------ */
+
+/* Ensure flex children can shrink inside .program-page-container */
+.program-item,
+#program-content,
+.code-output-container {
+    min-width: 0;            /* <--- critical for flex shrink */
+    box-sizing: border-box;
+}
+
+/* Ensure program items take full width but can shrink */
+.program-item {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Wrapper that holds Code & Output blocks (JS creates multiple .code-output-container) */
+.code-output-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: visible; /* let the inner pre show its own scrollbar */
+}
+
+/* Make <pre> behave: do not let it expand the layout, but allow horizontal scroll */
+pre[class*="language-java"],
+pre {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;           /* include padding inside width */
+    white-space: pre;                 /* preserve code formatting (no wrap) */
+    overflow-x: auto;                 /* show horizontal scrollbar when needed */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;/* smooth scrolling on mobile */
+    word-wrap: normal;                /* don't break words */
+    -ms-overflow-style: auto;         /* show scrollbar in IE/Edge */
+    scrollbar-width: auto;            /* default behavior in Firefox */
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+/* Ensure <code> inside <pre> doesn't force layout */
+pre > code,
+code[class*="language-"] {
+    display: block;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: pre; /* match the pre */
+}
+
+/* Optional: make scrollbar a little nicer on WebKit */
+pre[class*="language-java"]::-webkit-scrollbar {
+    height: 10px;
+}
+pre[class*="language-java"]::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(0,0,0,0.25);
+}
+
+/* Slightly reduce font/padding on very small screens */
+@media (max-width: 480px) {
+    pre[class*="language-java"],
+    pre {
+        font-size: 0.92rem;
+        padding: 0.7rem 0.9rem;
+    }
+}
+
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
