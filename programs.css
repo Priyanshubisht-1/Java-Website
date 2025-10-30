@@ -278,19 +278,17 @@ img {
     border-left: 5px solid var(--secondary-accent); /* Theme-colored accent */
 }
 
-/* NEW/MODIFIED: Style for the new combined description heading */
-.program-item .program-description-heading {
+.program-item h3 {
     font-size: 1.6rem;
     color: var(--dark-accent);
-    margin-bottom: 1.5rem; /* Replaces margin from old h3 and p */
-    font-weight: 600;
-    line-height: 1.4;
+    margin-bottom: 0.5rem;
 }
 
-/* REMOVED (Replaced by the rule above)
-.program-item h3 { ... }
-.program-item .program-description { ... }
-*/
+.program-item .program-description {
+    color: var(--light-text-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
 
 .program-heading {
     font-size: 1.1rem;
@@ -336,12 +334,24 @@ pre[class*="language-java"] {
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.5;
+    /* Allow code to wrap if it's too long, better for mobile */
     
-    /* --- MODIFICATION --- */
-    /* Changed from pre-wrap to pre to enable horizontal scrolling */
-    white-space: pre;
-    word-wrap: normal; /* Ensure word-wrap is off */
-    overflow-x: auto;  /* Add horizontal scrollbar when content overflows */
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: pre; /* preserve formatting */
+    overflow-x: auto; /* ✅ horizontal scrollbar instead of overflow */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; /* smooth scroll for mobile */
+    word-wrap: normal;
+}
+
+pre > code,
+code[class*="language-"] {
+    display: block;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 /* Output Box Style */
@@ -353,12 +363,9 @@ pre[class*="language-java"] {
     font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
     color: var(--text-color);
     min-height: 50px;
-    
-    /* --- MODIFICATION --- */
-    /* Changed from pre-wrap to pre to enable horizontal scrolling */
-    white-space: pre;
-    word-wrap: normal; /* Ensure word-wrap is off */
-    overflow-x: auto;  /* Add horizontal scrollbar when content overflows */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x:auto;
 }
 
 /* Loading Spinner */
