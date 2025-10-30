@@ -1,0 +1,7 @@
+[
+{
+"title": "Create a simple Java class for a 'Dog' with a method to 'bark'.",
+"code": "// Define the Dog class\nclass Dog {\n    String name;\n\n    // Constructor\n    public Dog(String name) {\n        this.name = name;\n    }\n\n    // Method\n    public void bark() {\n        System.out.println(name + " says: Woof!");\n    }\n}\n\n// Main class to test the Dog class\npublic class TestDog {\n    public static void main(String[] args) {\n        // Create a Dog object\n        Dog myDog = new Dog("Buddy");\n        \n        // Call the bark method\n        myDog.bark();\n    }\n}",
+"output": "Buddy says: Woof!"
+}
+]

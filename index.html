@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Java - Your Go-To Platform</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="logo.png" class="logo"/>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="#run-code">Run Code</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Master Java Programming with Ease!</h1>
+                <p>Start your journey into the world of Java with interactive lessons, practical examples, and a vibrant community.</p>
+                <button class="btn-primary">Get Started</button>
+            </div>
+            <div class="hero-image">
+                <img src="back.jpg" alt="People coding around a laptop">
+            </div>
+        </section>
+
+        <section id="programs" class="features-section">
+            <h2>Why Learn Java with Us?</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <ion-icon name="laptop-outline"></ion-icon>
+                    <h3>Interactive Lessons</h3>
+                    <p>Engage with hands-on examples and clear explanations for every concept.</p>
+                </div>
+                <div class="feature-item">
+                    <ion-icon name="code-slash-outline"></ion-icon>
+                    <h3>Practical Programs</h3>
+                    <p>Learn by doing with a variety of programming challenges and projects.</p>
+                </div>
+                <div class="feature-item">
+                    <ion-icon name="terminal-outline"></ion-icon>
+                    <h3>Live Code Editor</h3>
+                    <p>Experiment with Java code directly in your browser without any setup.</p>
+                </div>
+                <div class="feature-item">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <h3>Community Support</h3>
+                    <p>Connect with other learners and get help from experienced mentors.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="run-code" class="call-to-action-section">
+            <div class="cta-content">
+                <h2>Ready to Write Your First Line of Code?</h2>
+                <p>Our integrated code editor makes learning interactive and fun. Try it now!</p>
+                <button class="btn-secondary">Run Code Editor</button>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Get in Touch</h2>
+            <p>Have questions or feedback? We'd love to hear from you!</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Learn Java. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

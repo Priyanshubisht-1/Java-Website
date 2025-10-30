@@ -1,0 +1,7 @@
+[
+{
+"title": "Write a Java program to reverse a given string.",
+"code": "public class ReverseString {\n    public static void main(String[] args) {\n        String original = "Java";\n        String reversed = "";\n\n        // Loop from the end of the string to the beginning\n        for (int i = original.length() - 1; i >= 0; i--) {\n            reversed = reversed + original.charAt(i);\n        }\n\n        System.out.println("Original string: " + original);\n        System.out.println("Reversed string: " + reversed);\n    }\n}",
+"output": "Original string: Java\nReversed string: avaJ"
+}
+]

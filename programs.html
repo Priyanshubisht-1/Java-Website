@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programs - Learn Java</title>
+    
+    <!-- Program Page Stylesheet -->
+    <link rel="stylesheet" href="programs.css">
+    
+    <!-- Prism.js CSS for Syntax Highlighting (Tomorrow Night Theme) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+
+    <!-- IonIcons scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+    <!-- Reused Header -->
+    <header>
+        <nav class="navbar">
+            <img src="logo.png" alt="Learn Java Logo" class="logo" onerror="this.src='https://placehold.co/150x50/3d3b5b/dfebe9?text=LearnJava'"/>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="programs.html" style="color: var(--primary-action); font-weight: 700;">Programs</a></li>
+                <li><a href="index.html#run-code">Run Code</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <!-- BUG FIX: Corrected class spelling -->
+                <div class="line2"></div> 
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- New Main Content for Program Page -->
+    <main class="program-page-main">
+        <h1>Java Program Library</h1>
+
+        <div class="program-page-container">
+            
+            <!-- Sidebar for Program Categories -->
+            <aside id="sidebar">
+                <h3>Program Categories</h3>
+                <ul class="category-list">
+                    <!-- The data-category attribute MUST match the JSON filename (e.g., "basic" -> "basic.json") -->
+                    <li><a href="#" class="category-link active" data-category="basic">BASIC PROGRAMMING</a></li>
+                    <li><a href="#" class="category-link" data-category="oop">OBJECT ORIENTED</a></li>
+                    <li><a href="#" class="category-link" data-category="strings">STRINGS</a></li>
+                    <li><a href="#" class="category-link" data-category="arrays-single">SINGLE DIMENSION ARRAYS</a></li>
+                    <li><a href="#" class="category-link" data-category="inheritance">INHERITANCE</a></li>
+                    <li><a href="#" class="category-link" data-category="interfaces">INTERFACES</a></li>
+                    <li><a href="#" class="category-link" data-category="packages">PACKAGES</a></li>
+                    <li><a href="#" class="category-link" data-category="exceptions">EXCEPTION HANDLING</a></li>
+                    <li><a href="#" class="category-link" data-category="multithreading">MULTITHREADING</a></li>
+                    <li><a href="#" class="category-link" data-category="io">INPUT/OUTPUT</a></li>
+                    <li><a href="#" class="category-link" data-category="functions">FUNCTIONS</a></li>
+                    <li><a href="#" class="category-link" data-category="arrays-multi">MULTI-DIMENSION ARRAYS</a></li>
+                    <li><a href="#" class="category-link" data-category="conversion">DATA CONVERSION</a></li>
+                    <li><a href="#" class="category-link" data-category="awt">GUI (AWT)</a></li>
+                    <li><a href="#" class="category-link" data-category="swings">GUI (SWINGS)</a></li>
+                    <li><a href="#" class="category-link" data-category="event-model">DELEGATION EVENT MODEL</a></li>
+                    <li><a href="#" class="category-link" data-category="jdbc">JAVA DATABASE (JDBC)</a></li>
+                    <li><a href="#" class="category-link" data-category="applets">APPLETS</a></li>
+                </ul>
+            </aside>
+
+            <!-- Program Listings (This will be filled by JS) -->
+            <section id="program-content">
+                <!-- Initial loader -->
+                <div class="loader-container" id="loader">
+                    <div class="spinner"></div>
+                </div>
+                <!-- Programs will be dynamically injected here -->
+            </section>
+        </div>
+    </main>
+
+    <!-- Reused Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 Learn Java. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+    </footer>
+
+    <!-- Prism.js JS for Syntax Highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    
+    <!-- Your Custom Program Page JavaScript -->
+    <script src="programs.js"></script>
+
+</body>
+</html>
+
