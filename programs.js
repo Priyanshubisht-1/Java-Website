@@ -41,13 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
         programContent.innerHTML = loaderHTML;
 
         try {
-            // Fetch the corresponding JSON file
+            // Fetch the corresponding JSON file (e.g., "basic.json", "strings.json")
             const response = await fetch(`${category}.json`);
             
+            // This check is crucial. If the file is not found (404), response.ok will be false.
             if (!response.ok) {
-                throw new Error(`Could not find ${category}.json. File not found.`);
+                throw new Error(`Could not find ${category}.json. File not found (404).`);
             }
 
+            // This will fail if the file content is not valid JSON
             const programs = await response.json();
             
             // Clear loader
@@ -70,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Prism.highlightAll();
 
         } catch (error) {
+            // This 'catch' block is what's running in your screenshot
             console.error('Error loading programs:', error);
             programContent.innerHTML = `<p class="no-match-msg">Error loading programs. Please try again later.</p>`;
         }
@@ -85,8 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const escapedCode = escapeHTML(program.code);
         const escapedOutput = escapeHTML(program.output);
 
-        // MODIFICATION: Changed program.description to program.title
-        // This now reads the title field from the simplified JSON.
+        // This JS code now correctly reads 'program.title'
         return `
             <h3 class="program-description-heading">${number}. ${program.title}</h3>
 
@@ -103,6 +105,79 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4 class="program-heading">Output</h4>
                 <div class="output-box">${escapedOutput}</div>
             </div>
+        `;
+    }
+
+    /**
+     * Escapes HTML to prevent XSS and rendering issues.
+     * @param {string} str - The string to escape.
+     */
+    function escapeHTML(str) {
+        if (!str) return '';
+        return str.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+
+    // --- 3. EVENT LISTENERS ---
+
+    // Listen for clicks on sidebar links
+    categoryLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const category = link.dataset.category;
+            
+            // Update active state
+            categoryLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            
+            // Load the programs
+            loadPrograms(category);
+        });
+    });
+
+    // Listen for "Copy" button clicks (using event delegation)
+    programContent.addEventListener('click', (e) => {
+        const copyBtn = e.target.closest('.copy-btn');
+        
+        if (copyBtn && !copyBtn.classList.contains('copied')) {
+            // Find the code block
+            const pre = copyBtn.closest('.code-output-container').querySelector('pre');
+            if (!pre) return;
+            
+            const code = pre.innerText; // .innerText gets the text as rendered
+
+            // Use the clipboard fallback from the main prompt
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = code;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            
+            try {
+                document.execCommand('copy');
+                
+                // Visual feedback
+                const originalHtml = copyBtn.innerHTML;
+                copyBtn.innerHTML = '<ion-icon name="checkmark-outline"></ion-icon> Copied!';
+                copyBtn.classList.add('copied');
+                
+                setTimeout(() => {
+                    copyBtn.innerHTML = originalHtml;
+                    copyBtn.classList.remove('copied');
+                }, 2000);
+
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            }
+
+            document.body.removeChild(tempTextArea);
+        }
+    });
+
+    // --- 4. INITIAL LOAD ---
+    // Load the 'basic' category by default when the page starts
+    loadPrograms('basic');
+});            </div>
         `;
     }
 
